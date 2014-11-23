@@ -6,50 +6,7 @@
 <script src="js/jquery.min.js"></script>
 <link rel="stylesheet" href="FormValidation.css">
 <script type="text/javascript" src="MyFormValidation.js" ></script>
-<script>
-//Function for allowing only numbers in postal code and phone numbers... 
-//Here 8 is for backspace key, 37 for left arrow key and 39 for right arrow key and 9 is for Tab.
-//Here is a problem that ascii key conflicts occur at 37 and 39 % and ' also work.
-function onlyNumbers(event)				
-{
-    	var e =event; 
-   	var charCode = e.which || e.keyCode;
 
-    		if ((charCode >= 48 && charCode <= 57) || charCode == 8 || charCode == 37 || charCode == 39 || charCode == 9) 
-       			 return true;
-			else
-				 return false;
-
-}
-function onlyChars(event)
-{
-	var e =event;
-	var charCode = e.which || e.keyCode;
-	if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode == 8 || charCode == 9)
-		return true;
-	else 
-		return false;
-}
-/*Function used to copy the current address to permanent address*/
-function Copy(add)
-{
-	if(add.checkme.checked==true)
-	{
-		add.permanentaddress.value=add.currentaddress.value;
-	}
-}
-function digitsonly(e)
-{
-	var data=document.getElementById('cnumber').value;
-	if(data.Length!=10)
-       {
-       alert("Please enter 10 digits");
-       return false;
-       }
-    else
-    	return true;   
-}
-</script>
 </head>
 <body>
 	<div>  <!-- This div for outermost panel where panel property is removed-->
@@ -71,24 +28,24 @@ function digitsonly(e)
 	
 					
 									<br>
-										<select onchange="enterscore(this.value)" name="teamname" class="form-control">
+									<select onchange="enterscore(this.value)" name="teamname" class="form-control">
 											<option>Select A Team </option>
-											<option value="1">Team1 </option>
-											<option value="2">Team2 </option>
-											<option value="3">Team3 </option>
-											<option value="4">Team4 </option>
-											<option value="5">Team5 </option>
-											<option value="6">Team6 </option>
-											<option  value="7">Team7 </option>
-											<option value="8">Team8 </option>
-											<option value="9">Team9 </option>
-											<option value="10">Team10 </option>
-											<option value="11">Team11 </option>
-											<option value="12">Team12 </option>
-											<option value="13">Team13 </option>
-											<option value="14">Team14 </option>
+											<option value="1">Burn </option>
+											<option value="2">Dum Maro Dum </option>
+											<option value="3">Arey Yaar </option>
+											<option value="4">Bawa Behetrien </option>
+											<option value="5">Bol Bham </option>
+											<option value="6">Lai Bhaari </option>
+											<option  value="7">Hadd aHi Ho Gayi </option>
+											<option value="8">Kyun Batau</option>
+											<option value="9">Hutzpah</option>
+											<option value="10">Bang Bang </option>
+											<option value="11">Shaandar 16</option>
+											<option value="12">Dal Pe Re </option>
+											<option value="13">16 Ka Dola</option>
+											<option value="14">Dekh Bhai </option>
 										</select>
-										<form role="form" method="POST" id="theForm" action="r.php"> 
+										<form role="form" method="POST" id="theForm" action=""> 
 													
 													
 													
